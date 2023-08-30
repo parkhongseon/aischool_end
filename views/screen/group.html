@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+{% block content %}
+{% include 'components/header.html' %}
+
+<main class="group">
+    <h1 class='group__title'>{{group_info[0].party_title}}</h1>
+    <div class="group__nav">
+        <div class="group__board blue">커넥보드</div>
+        <div class="group__notice">팀 소통</div>
+
+    </div>
+
+    {% include 'components/notice.html' %}
+    {% include 'components/canvan.html' %}
+
+</main>
+
+{% include 'components/footer.html' %}
+<script src="/js/screen/group.js"></script> <!-- path 수정 -->
+
+{% endblock %}
